@@ -4,7 +4,7 @@ Repository ini menyimpan source code pembelajaran pemrograman dasar, materi di d
 - Tipe Data
 - Variabel
 - Input Output
-- Percabangan/Seleksi Kondisi
+- Seleksi Kondisi
 - Looping
 - Array
 - Method
