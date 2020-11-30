@@ -6,6 +6,7 @@ Repository ini menyimpan source code pembelajaran pemrograman dasar, materi di d
 - Input Output
 - Percabangan/Seleksi Kondisi
 - Looping
-- coming soon...
+- Array
+- Method
 
 Lokasi kode ada di src/pemdascodebase.
