@@ -27,17 +27,38 @@ public class Variable {
         
         Cara pemakaian:
         - final data_type name = value;
-        
-        Best Practice
+
         Di Java dalam menuliskan nama variabel / identifier diusahakan memenuhi beberapa syarat:
         1. Nama variabel harus deskriptif, maksudnya nama variabel harus menggambarkan apa yg disimpan
             misal: 
             int panjang lebih jelas daripada int p
+
+            10 -> panjang balok
+            int pb = 10;
+            int panjangBalok = 10;
+
         2. Menggunakan metode camelCase
             misal:
             int tinggiBadan bukan int tinggi_badan / TinggiBadan / dll
-        3. Tidak diawali dengan angka
         */
-        
+
+        byte varByte = 127;
+
+        long varLong = 127L;
+
+        double varDouble = 1.2;
+
+        float varFloat = 1.2F;
+
+        char varChar = 'A';
+
+        String varString = "asa";
+
+        boolean varBool = true;
+
+        final double PI = 3.14;
+
+        varByte = 12;
+
     }
 }

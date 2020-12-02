@@ -17,8 +17,8 @@ public class InputOutput {
 
         /* 
             Input
-            Ada 2 class java yang dapat digunakan untuk input di java, yaitu:
-            1. Scanner -> Digunakan selama praktikum
+            Ada 2 library java yang dapat digunakan untuk input di java, yaitu:
+            1. Scanner
             2. BufferedReader
         
             Cara pemakaian Scanner:
@@ -54,7 +54,9 @@ public class InputOutput {
                 - %f -> untuk bilangan float/double
                 - %c -> untuk char
                 - %C -> untuk char uppercase
+                - %n -> ganti baris
                 - dll
+
         */
         
         // Latihan
@@ -62,34 +64,33 @@ public class InputOutput {
         Buatlah program yang dapat menerima input dari pengguna berupa berat badan, tinggi, dan nama.
         Kemudian program anda dapat menghitung IMT dari inputan anda. 
         
-        Remus mencari IMT/BMI = Berat badan/ Tinggi badan^2
+        Rumus mencari IMT/BMI = Berat badan/ Tinggi badan^2
         */
         
         // Instansiasi objek scanner
         Scanner in = new Scanner(System.in);
-        
+
         // Deklarasi variabel
         double beratBadan, tinggiBadan, imt;
         String nama;
-        
+
         // Input user
-        System.out.printf("%-25s : ", "Masukkan berat badan (kg)");
-        beratBadan = in.nextDouble();
-        System.out.printf("%-25s : ", "Masukkan tinggi badan (m)");
-        tinggiBadan = in.nextDouble();
-        in.nextLine();
-        System.out.printf("%-25s : ", "Masukkan nama anda");
+        System.out.print("Masukkan nama Anda: ");
         nama = in.nextLine();
-        
+        System.out.print("Masukkan berat badan(kg): ");
+        beratBadan = in.nextDouble();
+        System.out.print("Masukkan tinggi badan(m): ");
+        tinggiBadan = in.nextDouble();
+
         // Proses hitung imt
-        imt = beratBadan / (tinggiBadan * tinggiBadan);
+        imt = beratBadan/Math.pow(tinggiBadan, 2);
         
         // Output
-        System.out.printf("%s, berikut spesifikasi imt anda: \n", nama);
-        System.out.printf("%-13s : %.2f\n", "Berat badan", beratBadan);
-        System.out.printf("%-13s : %.2f\n", "Tinggi badan", tinggiBadan);
-        System.out.printf("%-13s : %.2f\n", "IMT", imt);
-        
+        System.out.printf("%-15s: %s%n", "Nama kamu", nama);
+        System.out.printf("%-15s: %.2f%n", "Berat badan", beratBadan);
+        System.out.printf("%-15s: %.2f%n", "Tinggi badan", tinggiBadan);
+        System.out.printf("%-15s: %.2f%n", "IMT", imt);
+
     }
 
 }
