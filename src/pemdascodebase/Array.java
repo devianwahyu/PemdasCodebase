@@ -163,7 +163,7 @@ public class Array {
             {"Ekonomi", "50000", "2", "Tidak Ada", "Tidak Ada"},
             {"Bisnis", "100000", "5", "Ada", "Tidak Ada"},
             {"Eksekutif", "200000", "7", "Ada", "Tidak Ada"},
-            {"Pariwisata", "300000", "10", "Ada", "Tidak Ada"},
+            {"Pariwisata", "300000", "10", "Ada", "Ada"},
         };
         int pilihanMenuUser;
 
@@ -190,7 +190,17 @@ public class Array {
                 case 2:
                     System.out.println("List Kereta dengan AC: ");
                     for (int i = 0; i < listKereta.length; i++) {
-                        if (listKereta[i][0].equalsIgnoreCase("Ada")) {
+                        if (listKereta[i][3].equalsIgnoreCase("Ada")) {
+                            System.out.println(listKereta[i][0]);
+                        } else {
+                            System.out.print("");
+                        }
+                    }
+                    break;
+                case 3:
+                    System.out.println("List Kereta dengan colokan: ");
+                    for (int i = 0; i < listKereta.length; i++) {
+                        if (listKereta[i][4].equalsIgnoreCase("Ada")) {
                             System.out.println(listKereta[i][0]);
                         } else {
                             System.out.print("");
